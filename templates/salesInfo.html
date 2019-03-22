@@ -33,6 +33,7 @@
         </p>
         {% if specialSale %}
             <h2 class="infoH">Special Cow and Bull Sale</h2>
+            {% for special in specialSale %}
                 <p class="siP">
                     Sale Date: {{ special.sale_date }}
                 </p>
