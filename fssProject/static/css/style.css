@@ -120,6 +120,11 @@
     font-weight: 600;
     padding: 20px;
   }
+
+  .siP {
+    font-size: 18px;
+    font-weight: 600;
+  }
   
 /* Market.html Not In Use At This Time */
   #steerResults, 
@@ -150,7 +155,15 @@
     padding: 20px;
   }
 
-/* Special Sales Page */
+  .lsP {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .lsT td {
+    font-size: 16px;
+    font-weight: 500;
+  }
   
 
 /* Buyer/Seller Info Page */
@@ -170,7 +183,11 @@
 
   .tariff {
     margin: 20px 0;
-    background: rgba(0,0,0,0.095);
+    background: rgba(237,237,237,.3);
+  }
+
+  .cafe {
+    font-weight: 700;
   }
 
 /* Facility Page */
@@ -278,7 +295,7 @@
         background: rgba(200, 206, 204, 0.3); 
       }
     
-    .salesBodyBackground {
+    .infoBodyBackground {
       background-image: url(../images/fromVetToSalePenView-compressor.jpg);
       background-repeat: no-repeat;
       background-position: top center; 
@@ -288,8 +305,7 @@
       position: relative;
       overflow: hidden;
     }
-      .salesBodyBackground::before {
-        content: '';
+      .infoBodyBackground::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -407,6 +423,10 @@
 
     .deck2 {
       margin-top: 10px;
+    }
+
+    .tariff {
+      margin-left: 15px;
     }
   }
 

@@ -24,29 +24,23 @@
         <h1 class="reportH">Weekly Livestock Report</h1>
         {% if summaryReport %}
             {% for summary in summaryReport %}
-            <div class="row justify-content-between">
-                    <div class="col-4">
-                        <p>
-                            Livestock Summary Report.
-                        </p>
-                    <div class="col-4">
-                        <p>
-                            Date: {{ summary.sale_date }} Receipts: {{ summary.receipts }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-                <p>
+                <p class='lsP'>
+                    Livestock Summary Report.
+                </p>
+                <p class="lsP">
+                    Date: {{ summary.sale_date }} Receipts: {{ summary.receipts }}
+                </p>
+                <p class="lsP">
                     {{ summary.sale_description }}
                 </p>
             {% endfor %}
         {% else %}
-            <p>
+            <p class="lsP">
                 No Summary Report
             </p>
         {% endif %}
         {% if livestock %}
-            <p>
+            <p class="lsP">
                 Market Report.
                 <table class="table table-hover">
                     <thead>
@@ -54,163 +48,163 @@
                         <th scope="col">Livestock Type</th>
                         <th scope="col">Head Count</th>
                         <th scope="col">Weight Class</th>
-                        <th scope="col">Hight Price</th>
+                        <th scope="col">High Price</th>
                         <th scope="col">Low Price</th>
                         <th scope="col">Remarks</th>
                         </tr>
                     </thead>
                     {% for stock in livestock %}
                         {% if stock.type_Livestock == "Steers" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Dairy Steers" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Dairy Heifers" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Dairy Cows" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Heifers" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Bottle Calves" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Calves" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Bull Calves" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Pairs" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Bred Cows" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Bulls" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Slaughter Cows" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if stock.type_Livestock == "Slaughter Bulls" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ stock.type_Livestock }}</th>
                                 <td>{{ stock.head_Count }}</td>
                                 <td>{{ stock.livestock_weight }}</td>
-                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.high_price}}</td>
                                 <td>{{ stock.low_price}}</td>
                                 <td>{{ stock.remarks }}</td>
                                 </tr>
@@ -220,32 +214,30 @@
                 </table>
             </p>
         {% else %}
-            <p>No Market Report</p>
+            <p class="lsP">No Market Report</p>
         {% endif %}
       </main>
       <main class="intro">
         <h1 class="sheepH">Sheep/Goat Monthly Report</h1>
         {% if summarySheep %}
             {% for summary in summarySheep %}
-            <div class="row justify-content-between">
-                    <div class="col-4">
-                <p>
+                <p class="lsP">
                     Sheep/Goat Summary Report.
                 </p>
-                <p>
+                <p class="lsP">
                     Date: {{ summary.sale_date }} Receipts: {{ summary.receipts }}
                 </p>
-                <p>
+                <p class="lsP">
                     {{ summary.sale_description }}
                 </p>
             {% endfor %}
         {% else %}
-            <p>
+            <p class="lsP">
                 No Summary Report
             </p>
         {% endif %}
         {% if sheepstock %}
-            <p>
+            <p class="lsP">
             Sheep/Goat Market Report.
                 <table class="table table-hover">
                     <thead>
@@ -253,139 +245,139 @@
                         <th scope="col">Livestock Type</th>
                         <th scope="col">Head Count</th>
                         <th scope="col">Weight Class</th>
-                        <th scope="col">Hight Price</th>
+                        <th scope="col">High Price</th>
                         <th scope="col">Low Price</th>
                         <th scope="col">Remarks</th>
                         </tr>
                     </thead>
                     {% for sheep in sheepstock %}
                         {% if sheep.type_Livestock == "Feeder Kids" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Slaughter Kids" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Feeder Lambs" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Slaughter Lambs" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Replacement Does" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Slaughter Does" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Slaughter Rams" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Rams" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Slaughter Bucks" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Replacement Ewes" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                         {% if sheep.type_Livestock == "Bucks" %}
-                            <tbody>
+                            <tbody class="lsT">
                                 <tr>
                                 <th scope="row">{{ sheep.type_Livestock }}</th>
                                 <td>{{ sheep.head_Count }}</td>
                                 <td>{{ sheep.livestock_weight }}</td>
-                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.high_price}}</td>
                                 <td>{{ sheep.low_price}}</td>
                                 <td>{{ sheep.remarks }}</td>
                                 </tr>
@@ -395,7 +387,7 @@
                 </table>
             </p>
         {% else %}
-            <p>No Market Report</p>
+            <p class="lsP">>No Market Report</p>
         {% endif %}
       </main>
     </section>

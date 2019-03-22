@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from specialLivestockSale.models import SpecialLivestockSale
 
 
 def index(request, *args, **kwargs):
@@ -10,7 +11,13 @@ def contactRep_view(request, *args, **kwargs):
 
 
 def salesInfo_view(request, *args, **kwargs):
-    return render(request, "salesInfo.html", {})
+    specialSale = SpecialLivestockSale.objects.order_by('-sale_date').filter(is_published=True)
+
+    content = {
+        'specialSale': specialSale
+    }
+
+    return render(request, "salesInfo.html", content)
 
 
 def otherMarket_view(request, *args, **kwargs):
